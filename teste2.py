@@ -1,1 +1,2 @@
-print("oi")
+if 1 < 2:
+  print("oi")
