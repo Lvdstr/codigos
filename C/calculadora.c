@@ -8,11 +8,15 @@ int main(){
     char resposta[10];
     
     printf("bem vindo a versão da caclulazinha em c ");
+    
     printf("\ndigite o primeiro valor:");
     scanf("%d", &value_one);
+    
     printf("digite o segundo valor:");
     scanf("%d", &value_two);
+    
     printf("essas são as operaçoes disponiveis:\n");
+    
     printf("+ = soma\n- = subtrair\n* = multiplicar\n");
     printf("/ = dividir\n‰ = modular\n** = potencia:");
     scanf("%s", resposta);

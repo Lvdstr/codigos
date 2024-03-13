@@ -2,7 +2,9 @@
 
 int main(){
   int hora;
-  printf("descubra se pode entrar ou não no cinema\n");  
+  
+  printf("descubra se pode entrar ou não no cinema\n");
+  
   printf("informe a hora para saber se pode ou não entrar no cinema: ");
   scanf("%d", &hora);
     
