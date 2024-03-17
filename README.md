@@ -3,7 +3,7 @@
 
 <h2>por hora os codigos presentes nesse repositorio são feitos usando as seguintes linguagens:</h2>
 <ul>
-  <li>### javascript</li>
-  <li>### python</li>
-  <li>### c</li>
+  <li>javascript</li>
+  <li>python</li>
+  <li>c</li>
 </ul>
