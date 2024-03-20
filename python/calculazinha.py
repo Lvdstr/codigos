@@ -45,7 +45,10 @@ escolha a operacao
     print(f"{numero_1} * {numero_2} = {numero_1 * numero_2}")
     
   elif operacao == '/':
-    print(f"{numero_1} / {numero_2} = {numero_1 / numero_2}")
+  	if numero_1 == 0 or numero_2 == 0:
+  		print("não é possível dividir por zero irmão")
+  	else:
+  		print(f"{numero_1} / {numero_2} = {numero_1 / numero_2}")
     
   elif operacao == '%':
     print(f"{numero_1} % {numero_2} = {numero_1 % numero_2}")
