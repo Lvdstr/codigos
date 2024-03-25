@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Chewy';
+      }
+      
+        @font-face{
+          font-family: 'Chewy';
+          src: url(../font/Chewy-Regular.ttf);
+        }
+      
+        body{
+          display: flex;
+          margin: 10px 0px 0px 0px ;
+          justify-content: center;
+        }
+      
+        .caixa{
+          width: 300px;
+          height: 260px;
+          background-color: rgb(255, 255, 255);
+          border: 1px solid rgb(112, 112, 112);
+          box-shadow: 10px 15px 8px rgb(121, 110, 110);
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+      
+        .caixa label{
+          font-weight: bolder;
+          font-size: 19px;
+          margin: 2px 0px 2px 0px;/* superior,direito,inferior e esquerdo */
+        }
+      
+        .caixa input {
+          background-color: #eee;
+          border: none;
+          padding: 1rem;
+          font-size: 1rem;
+          text-align: center;
+          height: 10px;
+          width: 250px;
+          border-radius: 6px;
+          color: rgb(3, 205, 255);
+          box-shadow: 0 0.4rem #dfd9d9;
+          margin: 15px 0px 8px 0px;
+        }
+      
+        .caixa input:focus {
+          outline-color: rgb(3, 205, 255);
+        }
+      
+        .caixa button{
+          margin: 6px 0px 5px 0px;
+          width: 100px;
+          height: 40px;
+          border: none;
+          border-radius: 5px;
+          background-color: blue;
+          color: white;
+          font-size: 20px;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+      
+        .caixa button:hover{
+          transform: scale(0.9);
+          background-color: rgb(2, 2, 170);
+        }
+      
+        .caixa button:active{
+          background-color: rgb(1, 1, 122);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="caixa">
+      <h2>conversão de  fahrenheit para celsius</h2>
+      <label for="number1">digite a temperatura em graus fahrenheit</label>
+      <input type="number" id="number">
+      <button onclick="convert()">enviar</button>
+      <h3 id="result"></h3>
+    </div>
+    <script>
+      function convert(){
+      
+          var inicial = document.getElementById("number").value;
+      
+          var conv = inicial - 32 *5/9;
+          var res = document.getElementById("result").innerHTML = "aqui esta o resultado " + conv;
+        }
+    </script>
+  </body>
+</html>

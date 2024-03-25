@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Chewy';
+      }
+    
+    @font-face{
+        font-family: 'Chewy';
+        src: url(../font/Chewy-Regular.ttf);
+      }
+    
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .caixa{
+        width: 280px;
+        height: 320px;
+        margin: 15px 0px 0px 0px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        box-shadow: 10px 10px 8px grey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    label{
+        margin-bottom: 6px;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    
+    input{
+        text-align: center;
+        border-radius: 4px;
+        border: 1px solid black;
+    }
+    
+    select{
+        width: 120px;
+        background-color: blue;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+    }
+    
+    button{
+        margin: 12px 0px 8px 0px;
+        cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="caixa">
+    <h1>calculazinha v2</h1>
+    <label for="number1">digite o 1 numero</label>
+    <input type="number" id="number1">
+
+    <label for="number2">digite o 2 numero</label>
+    <input type="number" id="number2">
+
+    <label for="TESTE">Formula:</label>
+    <select name="calculadora" id = "formula">
+      <option value="" selected disabled>selecione</option>
+      <option value="somar">somar</option>
+      <option value="subtrair">subtrair</option>
+      <option value="multiplicar">multiplicar</option>
+      <option value="dividir">dividir</option>
+    </select>
+    <button onclick="sla()">enviar</button>
+    <p id="resul"></p>
+  </div>
+  <script>
+    function sla() {
+    var one = document.getElementById("number1").value;
+
+    var two = document.getElementById("number2").value;
+    var res = document.getElementById("formula").value;
+
+    one = parseFloat(one);
+    two = parseFloat(two);
+    switch (res) {
+      case 'somar':
+      document.getElementById("resul").innerHTML = one + two;
+        break;
+      case 'multiplicar':
+      document.getElementById("resul").innerHTML = one * two;
+        break;
+      case 'dividir':
+      document.getElementById("resul").innerHTML = one / two;
+        break;
+      case 'subtrair':
+      document.getElementById("resul").innerHTML = one - two;
+        break;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>somar numeros</title>
+    <meta charset="utf-8">
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Chewy';
+      }
+      
+        @font-face{
+          font-family: 'Chewy';
+          src: url(../font/Chewy-Regular.ttf);
+        }
+        
+        body{
+          display: flex;
+          justify-content: center;
+        }
+        
+        .caixa {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          border: 1px solid white;
+          border-radius: 8px;
+          padding: 15px;
+          width: 300px;
+          margin: 20px;
+          border: 1px solid grey;
+          box-shadow: 12px 10px 10px rgba(152,152,152,1);
+          align-items: center;
+          background-color: white;
+        }
+      
+        .caixa label{
+          font-size: 20px;
+          font-weight: bolder;
+        }
+        
+        .caixa input {
+          background-color: #eee;
+          border: none;
+          padding: 1rem;
+          font-size: 1rem;
+          text-align: center;
+          height: 10px;
+          width: 250px;
+          border-radius: 6px;
+          box-shadow: 0 0.4rem #dfd9d9;
+          margin: 5px 0px 1px 0px;
+        }
+      
+        .caixa input:focus {
+          outline-color: rgb(3, 205, 255);
+        }
+        
+        #btn{
+          color: white;
+          background-color: #45d9ffff;
+          border-radius: 5px;
+          border: none;
+          height: 35px;
+          width: 250px;
+          font-size: 20px;
+          transition: all 0.5s ease;/*transição de 0.5 segundos entre todas as propriedades como o transform que redux o tamanho original do botão em 10%
+            */
+        }
+        
+          #btn:hover {
+            transform: scale(0.9); /* Reduz o tamanho do botão em 10% durante o hover,
+            o valor padrão é 1.0 então 
+            0.9  é diminuir em 10%*/
+            background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="caixa">
+      <h2>some 2 numeros</h2>
+      <label for="valor1">primeiro valor</label>
+      <input type="number" id="valor1" placeholder="digite um numero">
+      <br/>
+      <label for="valor2">segundo valor</label>
+      <input type="number" id="valor2"
+      placeholder="digite um numero">
+      <br/>
+      <button id="btn" onclick="somarNumeros()">somar</button>
+      <br>
+      <h4 id="resul"></h4>
+    </div>
+    <script>
+      function somarNumeros() {
+      
+          var n1 = document.getElementById("valor1").value;
+      
+          var n2 = document.getElementById("valor2").value;
+          
+          n1 = parseFloat(n1);
+          n2 = parseFloat(n2);
+          soma = n1 + n2;
+          document.getElementById("resul").innerHTML = "o resultado eh: " + soma;
+        }
+    </script>
+  </body>
+</html>
